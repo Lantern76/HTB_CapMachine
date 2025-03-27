@@ -8,9 +8,7 @@
 + Date: 2023-10-31 🕷️
 + Author: Lantern 🔥
 
-<p
-align="center"> <img src="(https://github.com/Lantern76/HTB_Writeups/blob/main/Screenshot%202024-04-20%20054546.png)"
-</p>
+![Alt text](https://github.com/Lantern76/HTB_Writeups/blob/main/Screenshot%202024-04-20%20054546.png)
 
  Haunted Flag Hunt
 👻 User Flag Séance (1/2)
