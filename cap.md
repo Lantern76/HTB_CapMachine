@@ -21,7 +21,7 @@ curl http://10.10.10.245/data/0 -o haunted.pcap
 PCAP Ghost Whispering
 → Heard credentials whispering in the packets: Often times when a there is an ID/# we can run other ID's to see what we can find.
 
-![NMAP](https://github.com/Lantern76/HTB_Writeups/blob/main/Cap/1.png?raw=true)
+![NMAP](https://raw.githubusercontent.com/Lantern76/HTB_Writeups/main/Cap/1.png?raw=true)
 
 Step 2
 tshark -r haunted.pcap -Y "ftp contains 'PASS'" -Tfields -e ftp.request.arg
