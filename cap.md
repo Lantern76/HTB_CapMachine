@@ -8,7 +8,7 @@
 + Date: 2023-10-31 🕷️
 + Author: Lantern 🔥
 
-![image](Cap/1.png))
+![image
 
  Haunted Flag Hunt
 👻 User Flag Séance (1/2)
@@ -21,8 +21,7 @@ curl http://10.10.10.245/data/0 -o haunted.pcap
 PCAP Ghost Whispering
 → Heard credentials whispering in the packets: Often times when a there is an ID/# we can run other ID's to see what we can find.
 
-![1](https://github.com/user-attachments/assets/0367eff8-ceec-47d8-9a88-80baf9d20c35)
-
+![NMAP](https://github.com/Lantern76/HTB_Writeups/blob/main/Cap/1.png?raw=true)
 
 Step 2
 tshark -r haunted.pcap -Y "ftp contains 'PASS'" -Tfields -e ftp.request.arg
